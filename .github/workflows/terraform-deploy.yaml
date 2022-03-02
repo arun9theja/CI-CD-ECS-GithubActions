@@ -64,6 +64,9 @@ jobs:
     needs: docker-build
     name:   ${{matrix.runner}} - ${{ matrix.environment }}
     runs-on: [ '${{ matrix.runner }}']
+    defaults:
+      run:
+        working-directory: terraform
     strategy:
       max-parallel: 1
       matrix:
