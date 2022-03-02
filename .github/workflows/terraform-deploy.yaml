@@ -45,6 +45,11 @@ jobs:
       with:
         registry: public.ecr.aws
 
+    - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: LoginWebApp-1.war
+
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
