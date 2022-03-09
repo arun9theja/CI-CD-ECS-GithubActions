@@ -18,6 +18,7 @@
    region                  = var.region
    app_definitions         = local.app_definitions
    health_check_path       = "/LoginWebApp-1/"
+   container_version       = var.container_version
  }
  
 
